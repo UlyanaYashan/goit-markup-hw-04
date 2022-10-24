@@ -60,7 +60,25 @@ ul {
 }
 
 /* навігація сайту */
-
+.envelope {
+  
+  fill: #757575;
+  margin-right: 10px;
+  width: 16px;
+  height: 12px;
+}
+.envelope:hover {
+  fill: var(--accent-color);
+}
+.vector {
+  width: 10px;
+  height: 14px;
+  margin-right: 10px;
+  fill: #757575;
+}
+.vector:hover {
+  fill: var(--accent-color);
+}
 .site-nav {
   display: flex;
   margin-left: 93px;
@@ -98,10 +116,12 @@ ul {
 .contacts {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 .contacts-item {
   margin-right: 50px;
 }
+
 .contacts-item:last-child {
   margin-right: 0px;
 }
@@ -155,8 +175,18 @@ ul {
   margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px ;
+  height: 600px;
+ 
+  background-image: linear-gradient( to right,
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)
+   ),
+  url(../images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-  background-color: var(--secondary-background-color);
   text-align: center;
  
 }
@@ -213,6 +243,28 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
 }
 .benefits-item:last-child {
   margin-right: 0px;
+}
+.benefits-item::before {
+  content: "";
+  display: block;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F5F4FA;
+
+  margin-bottom: 30px;
+}
+.benefits-item-1::before {
+  background-image: url(../images/benefit-1.svg);
+}
+.benefits-item-2::before {
+  background-image: url(../images/benefit-2.svg);
+}
+.benefits-item-3::before {
+  background-image: url(../images/benefit-3.svg);
+}
+.benefits-item-4::before {
+  background-image: url(../images/benefit-4.svg);
 }
 .benefits-title {
   margin-top: 0px;
@@ -295,6 +347,68 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
+/* Посилання на соцмережі */
+.item-network {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item-network-link {
+  margin-right: 10px;
+}
+.item-network-link:last-child {
+  margin-right: 0px;
+}
+.link-twitter, .link-instagram, .link-facebook, .link-linkedin {
+  display: block;
+  width: 44px;
+  height: 44px;
+  color: #AFB1B8;
+  border-radius: 50%;
+  text-align: center;
+}
+.footer-link-instagram {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+.link-twitter:hover, .link-instagram:hover, .link-facebook:hover, .link-linkedin:hover {
+  background-color: #188CE8;
+}
+
+.link-twitter:hover, .link-instagram:hover, .link-facebook:hover, .link-linkedin:hover {
+  color: #FFFFFF;
+}
+.instagram {
+  fill: currentColor;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-left: 12.04px;
+  margin-right: 11.97px;
+}
+.twitter {
+  fill: currentColor;
+  margin-top: 13.88px;
+  margin-bottom: 13.87px;
+  margin-left: 12px;
+  margin-right: 12px;
+  
+}
+.facebook {
+  fill: currentColor;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-left: 17.16px;
+  margin-right: 16.84px;
+}
+.linkedin {
+  fill: currentColor;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
 .list-position {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -303,6 +417,57 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
   font-size: 16px;
   line-height: 1.2;
 }
+
+/* Наші клієнти */
+.client-title{
+  margin-top: 0px;
+  margin-bottom: 50px;
+  
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+}
+.clients {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  align-items: center;
+
+}
+.link-client-logo {
+  display: block;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  justify-content: center;
+  color: #AFB1B8;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  
+}
+.client {  
+  margin-right: 30px;
+}
+.client:last-child {
+  margin-right: 0px;
+}
+.link-client-logo:hover {
+  color: #188CE8;
+}
+.link-client-logo:hover {
+  border: 1px solid #188CE8;
+}
+.client-logo {
+width: 106px;
+height: 60px;
+fill: currentColor;
+}
+
 
 /* Футер */
 .footer {
@@ -347,7 +512,22 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
 .footer-link:hover {
   color: var(--accent-color);
 }
-
+.footer-flex {
+  display: flex;
+}
+.footer-flex-item {
+  margin-right: 70px;
+}
+.footer-flex-item:last-child {
+  margin-right: 0px;
+}
+.footer-title {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  line-height: 1.14;
+}
 /* Portfolio */
 
 .btn-list {
