@@ -11,7 +11,8 @@ html {
     --primary-text-color: #212121;
     --secondary-text-color:#757575;
     --accent-color: #2196f3;
-    --primary-background-color: #FFFFFF; ;
+    --primary-background-color: #FFFFFF; 
+    --primary-background-color-2:#F5F4FA;
     --secondary-background-color:#2f303a;
     --hero-text-color: #FFFFFF;
 }
@@ -33,7 +34,6 @@ ul {
   padding: 0;
   margin: 0;
 }
-
 
 /* логотип сайту */
 .header {
@@ -61,22 +61,21 @@ ul {
 
 /* навігація сайту */
 .envelope {
-  
   fill: #757575;
+
   margin-right: 10px;
-  width: 16px;
-  height: 12px;
 }
-.envelope:hover {
+.envelope:hover,
+.envelope:focus {
   fill: var(--accent-color);
 }
 .vector {
-  width: 10px;
-  height: 14px;
   margin-right: 10px;
+
   fill: #757575;
 }
-.vector:hover {
+.vector:hover,
+.vector:focus {
   fill: var(--accent-color);
 }
 .site-nav {
@@ -110,9 +109,9 @@ ul {
 .site-nav-link:active {
   color: var(--accent-color);
 }
-.current {
-  color: var(--accent-color);
-}
+.current { 
+  color: var(--accent-color); 
+} 
 .contacts {
   display: flex;
   margin-left: auto;
@@ -187,9 +186,9 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
 
-  text-align: center;
- 
+  text-align: center; 
 }
+
 h1 {
   margin: 0;
 }
@@ -230,7 +229,7 @@ h1 {
   font-weight: 700;
 }
 .hero-btn:hover, .hero-btn:focus {
-background: #188CE8;
+background: var(--accent-color);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
 }
 
@@ -244,7 +243,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
 .benefits-item:last-child {
   margin-right: 0px;
 }
-.benefits-item::before {
+/* .benefits-item::before {
   content: "";
   display: block;
   height: 120px;
@@ -265,7 +264,21 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
 }
 .benefits-item-4::before {
   background-image: url(../images/benefit-4.svg);
+} */
+.thumbs {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 100px;
+  padding-left: 100px;
+  background-color: #F5F4FA;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
+
 .benefits-title {
   margin-top: 0px;
   margin-bottom: 10px;
@@ -314,7 +327,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
  /* Наша команда */
 
  .workers {
-  background-color: #F5F4FA;
+  background-color: var(--primary-background-color-2);
 }
 .worker-no-gap {
   display: block;
@@ -327,7 +340,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
   margin-right: 30px;
   width: calc((100% - 60px) / 4);
   border-radius: 0px 0px 4px 4px;
-  background: #FFFFFF;
+  background: var(--primary-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 } 
 .flex-item:last-child {
@@ -349,6 +362,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
 }
 
 /* Посилання на соцмережі */
+
 .item-network {
   display: flex;
   align-items: center;
@@ -368,16 +382,16 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
   border-radius: 50%;
   text-align: center;
 }
-.footer-link-instagram {
+.footer-link-instagram, .footer-link-twitter, .footer-link-facebook, .footer-link-linkedin {
   background-color: rgba(255, 255, 255, 0.1);
-  color: #FFFFFF;
+  color: var(--primary-background-color);
 }
 .link-twitter:hover, .link-instagram:hover, .link-facebook:hover, .link-linkedin:hover {
-  background-color: #188CE8;
+  background-color: var(--accent-color); 
 }
 
 .link-twitter:hover, .link-instagram:hover, .link-facebook:hover, .link-linkedin:hover {
-  color: #FFFFFF;
+  color: var(--primary-background-color);
 }
 .instagram {
   fill: currentColor;
@@ -392,7 +406,6 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
   margin-bottom: 13.87px;
   margin-left: 12px;
   margin-right: 12px;
-  
 }
 .facebook {
   fill: currentColor;
@@ -434,7 +447,6 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
   margin: 0px;
   padding: 0px;
   align-items: center;
-
 }
 .link-client-logo {
   display: block;
@@ -448,7 +460,6 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
   padding-right: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
-  
 }
 .client {  
   margin-right: 30px;
@@ -457,10 +468,10 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
   margin-right: 0px;
 }
 .link-client-logo:hover {
-  color: #188CE8;
+  color: var(--accent-color);
 }
 .link-client-logo:hover {
-  border: 1px solid #188CE8;
+  border: 1px solid var(--accent-color);
 }
 .client-logo {
 width: 106px;
@@ -468,12 +479,10 @@ height: 60px;
 fill: currentColor;
 }
 
-
 /* Футер */
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  
+  max-width: 1600px ;
+  height: 252px;
   background-color: var(--secondary-background-color);
 }
 
@@ -516,17 +525,25 @@ fill: currentColor;
   display: flex;
 }
 .footer-flex-item {
+  margin-top: 60px;
+  margin-bottom: 60px;
   margin-right: 70px;
 }
-.footer-flex-item:last-child {
-  margin-right: 0px;
-}
+.footer-flex-item-link {
+  margin-top: 72px;
+  margin-bottom: 100px;
+} 
+
 .footer-title {
+  margin: 0px;
+  margin-bottom: 20px;
+
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: var(--primary-background-color);
   line-height: 1.14;
+  font-size: 14px;
 }
 /* Portfolio */
 
@@ -550,7 +567,7 @@ justify-content: center;
   
   text-align: center;
   color: var(--primary-text-color);
-  background-color: #F5F4FA;;
+  background-color: var(--primary-background-color-2);
   cursor: pointer;
   font-family: inherit;
   font-size: 16px;
@@ -561,19 +578,24 @@ justify-content: center;
 .btn:hover,
 .btn:focus {
   background-color: var(--accent-color);
-  color:var(--hero-text-color)
+  color:var(--hero-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .project-list {
   display: flex;
   flex-wrap: wrap;
-  gap:30px;
-
+  gap: 30px;
 }
 .project-list-item {
   flex-basis: calc((100% - 60px) / 3);
 }
-
+.project-list-link {
+  display: block;
+}
+.project-list-link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .project-title {
   margin-bottom: 4px;
   margin-top: 0px;
